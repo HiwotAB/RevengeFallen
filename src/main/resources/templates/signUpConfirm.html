@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="base :: header">
-    <title>Display User Resume Info</title>
-</head>
+    <title>Display User Info</title>
+
+    <link rel="stylesheet" href="../css/signUp.css"></head>
 
 <body>
-<div th:replace="base :: vav"></div>
-    <div class="container">
-        <div class="starter-template">
-            <form class="well form-horizontal" th:action="@{/signUpConfirm}" th:object="${newUser}" method="">
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Securex</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    </div>
+    <br />
+    <br />
+
+    <form class="well form-horizontal" th:action="@{/signUpConfirm}" th:object="${newUser}" method="">
                 <fieldset>
                     <!-- Form Name -->
                     <legend align="Center">Your Information:</legend>

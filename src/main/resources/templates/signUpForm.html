@@ -2,13 +2,21 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="base :: header">
     <title>Add User Info</title>
+    <link rel="stylesheet" href="../css/signUp.css">
 </head>
 <body>
 <!-- Header -->
 
-<div th:replace="base :: vav"></div>
+
 <div class="container">
+
     <div class="starter-template">
+        <h1>Securex</h1>
+        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    </div>
+    <br />
+    <br />
+
         <form autocomplete="off" class="well form-horizontal"
               action="#"
               th:action="@{/signUpForm}"
