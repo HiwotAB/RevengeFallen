@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:replace="base :: head">
+    <title>Home Page</title>
+</head>
+<body>
+        <div class="container">
+                <div class="starter-template">
+                        <h1>Welcome</h1>
+                        <br>
+                        <h2>Do you have Account?!</h2>
+                        <br>
+                        <div><h3><a href="login" type="submit"  class="btn btn-full">LogIn</a></h3></div><br>
+
+                        <div><h3><a href="signUpForm" type="submit"  class="btn btn-full">SignUp</a></h3></div>
+                </div>
+        </div>
+
+
+<!--<div th:replace="base :: footlinks"></div>-->
+</body>
+</html>

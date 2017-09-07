@@ -1,5 +1,7 @@
 package byAJ.Securex.models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,8 +12,11 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @NotEmpty
     private String title;
+    @NotEmpty
     private String author;
+    @NotEmpty
     private String image;
 
     public int getId() {

@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org ">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head th:replace="base :: head">
+    <meta charset="UTF-8"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/new.css">
 
-    <th:block th:replace="base :: head"></th:block>
 </head>
+
 <body>
-    <th:block th:replace="base :: nav"></th:block>
-
-    <div class="container">
-
-        <div class="starter-template">
-            <h1>Securex</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <div th:replace="base :: nav"></div>
+        <div class="container">
+            <div class="starter-template">
+                <h1>Securex</h1>
+                <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+                <h2>It worked!</h2>
+                <div sec:authorize="isAuthenticated()">
+                    This content is only shown to authenticated users.
+                </div>
+                <div sec:authorize="hasAuthority('ADMIN')">
+                    This content is only shown to administrators.
+                </div>
+                <div sec:authorize="hasAuthority('USER')">
+                    Has Authority USER
+                </div>
+                Logged user: <span sec:authentication="name">The user is not logged in yet</span>
+            </div>
         </div>
-
-    </div><!-- /.container -->
-
-    <th:block th:replace="base :: footlinks"></th:block>
+    <div th:replace="base :: footlinks"></div>
 </body>
 </html>
+
+
+
