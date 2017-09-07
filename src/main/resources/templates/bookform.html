@@ -14,18 +14,21 @@
             <form action="#" th:action="@{/books/add}" th:object="${book}" method="post">
                 <div class="form-group">
                     <label for="image">Image Url</label>
-                    <div  th:if="${#fields.hasErrors('image')}" th:errors="*{image}" class="well alert alert-danger" role="alert">Image has error!</div>
+
                     <input type="text" class="form-control" id="image" placeholder="Image Url" th:field="*{image}">
+                    <div  th:if="${#fields.hasErrors('image')}" th:errors="*{image}" class="well alert alert-danger" role="alert">Image has error!</div>
                 </div>
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <div  th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="well alert alert-danger" role="alert">Title  has error!</div>
+
                     <input type="text" class="form-control" id="title" placeholder="Title" th:field="*{title}">
+                    <div  th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="well alert alert-danger" role="alert">Title  has error!</div>
                 </div>
                 <div class="form-group">
                     <label for="author">Author</label>
-                    <div  th:if="${#fields.hasErrors('author')}" th:errors="*{author}" class="well alert alert-danger" role="alert">Author has error!</div>
+
                     <input type="text" class="form-control" id="author" placeholder="Author" th:field="*{author}">
+                    <div  th:if="${#fields.hasErrors('author')}" th:errors="*{author}" class="well alert alert-danger" role="alert">Author has error!</div>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
